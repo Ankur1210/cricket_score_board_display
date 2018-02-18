@@ -1,38 +1,31 @@
-
 #include<stdio.h>
-
 #include<stdlib.h>
 
 struct batsman
-
- { char name[25],mode[70],status;
-
+ { 
+   char name[25];
    int runs,score,balls,toruns,tobal,ones,twos,threes,fours,sixes;
    float str;
 
  }pl1[100],pl3;
 
 
-
 struct bowler
-
- { char name[25];
-
+ { 
+   char name[25];
    int runsgv,wkttkn,overs;
    float econ;
  }pl2[100];
 
 
 int main()
-
-{ int plno,choice;
-
+{ 
+ int plno,choice;
   int i,n,m;
   printf("Enter the Batsman detail:\n");
   printf("Enter the number of batsman:\n");
   scanf("%d",&m);
   for(i=0;i<m;i++)
-
    {
 
        printf("Enter name of batsman%d:\n",i+1);
@@ -73,7 +66,6 @@ int main()
 
 
    for(i=0;i<n;i++)
-
    {
 
        printf("\nEnter name of bowler%d:",i+1);
@@ -97,18 +89,15 @@ int main()
 
 
    do
-
     {
 
        printf("Enter the choice:\n 1)Batsman detail:\n 2)Bowlers detail:\n 3)Match summary:\n 4)Exit\n ");
        scanf("%d",&choice);
 
      switch(choice)
-
       {
 
         case 1:
-
               printf("Enter the batsman number to see his details\n");
               scanf("%d",&plno);
 
@@ -127,7 +116,6 @@ int main()
 
 
         case 2:
-
              printf("Enter the bowlers number to see his details\n");
              scanf("%d",&plno);
 
@@ -173,12 +161,8 @@ int main()
 
         case 4:exit(1);
 
-               break;
-
         default:
-
              printf("Enter the correct choice\n");
-
              break;
 
       }
