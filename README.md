@@ -15,7 +15,8 @@ When the project file of cricket score sheet project is executed, it works by fo
 	Batsman detail
 	Bowlers detail
 	Match summary
-	 Exit
+	Record
+     Exit
 	
          If 1) is entered,the batsman detail is displayed on the screen.It display the batsman name,toatal runs scored,balls faced,fours ,sixes and the strike rate.
 
@@ -23,7 +24,9 @@ When the project file of cricket score sheet project is executed, it works by fo
 
         If 3)is entered,the match summary is displayed on the screen.
 
-        If 4)is entered,it is used to exit.
+        If 4)is entered,the match records will be displyed like maximum runs,maximum sixes,mximum fours,maximum wicket taken etc.
+        
+        If 5)is entered,it is used to exit.
 
 
 Thus ,by entering the choice ,the user can see the cricket score board.
