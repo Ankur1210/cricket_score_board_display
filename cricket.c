@@ -2,24 +2,27 @@
 #include<stdlib.h>
 
 struct batsman
- { 
+ {
    char name[25];
    int runs,score,balls,toruns,tobal,ones,twos,threes,fours,sixes;
+   int max_six,max_run,max_four;
+   char maxsn[25];//,max_sn[25],max_fn[25];
    float str;
 
  }pl1[100],pl3;
 
 
 struct bowler
- { 
+ {
    char name[25];
    int runsgv,wkttkn,overs;
+   int max_w;
    float econ;
- }pl2[100];
+ }pl2[100],pl4;
 
 
 int main()
-{ 
+{
  int plno,choice;
   int i,n,m;
   printf("Enter the Batsman detail:\n");
@@ -91,7 +94,7 @@ int main()
    do
     {
 
-       printf("Enter the choice:\n 1)Batsman detail:\n 2)Bowlers detail:\n 3)Match summary:\n 4)Exit\n ");
+       printf("Enter the choice:\n 1)Batsman detail:\n 2)Bowlers detail:\n 3)Match summary:\n 4)Record:\n5)Exit\n ");
        scanf("%d",&choice);
 
      switch(choice)
@@ -159,7 +162,46 @@ int main()
 
                break;
 
-        case 4:exit(1);
+        case 4: pl3.max_run=0,pl4.max_w=0,pl3.max_four=0,pl3.max_six=0;
+       
+                for(i=0;i<m;i++)
+                  { 
+                     pl1[i].runs=(1*pl1[i].ones)+(2*pl1[i].twos)+(3*pl1[i].threes)+(4*pl1[i].fours)+(6*pl1[i].sixes);
+                     if(pl3.max_run<pl1[i].runs)
+                        {
+                          pl3.max_run=pl1[i].runs;
+
+                        }
+                 
+                     if(pl3.max_six<pl1[i].sixes)
+                       {
+                        pl3.max_six=pl1[i].sixes;
+                       }
+                 
+                     if(pl3.max_four<pl1[i].fours)
+                       {
+                        pl3.max_four=pl1[i].fours;
+                       }
+ 
+                     if(pl4.max_w<pl2[i].wkttkn)
+                      {
+                      pl4.max_w=pl2[i].wkttkn;
+                      }
+                  }
+              printf("Highest runs scored by the batsman:%d\n",pl3.max_run);
+   
+              printf("Maximum fours scored by the batsman:%d\n",pl3.max_four);
+
+              printf("Maximum sixes scored by the batsman%d:\n",pl3.max_six);
+ 
+             printf("Maximum wickets taken by the bowler:%d\n",pl4.max_w);
+
+             break;
+
+
+
+        case 5:
+            exit(1);
 
         default:
              printf("Enter the correct choice\n");
@@ -167,10 +209,7 @@ int main()
 
       }
 
-    }while(choice!=4);
-
-
-
+    }while(choice!=5);
 
 
    return 0;
