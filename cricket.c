@@ -93,7 +93,7 @@ int main()
    do
     {
 
-       printf("Enter the choice:\n 1)Batsman detail:\n 2)Bowlers detail:\n 3)Match summary:\n 4)Record:\n5)Exit\n ");
+       printf("Enter the choice:\n 1)Batsman detail:\n 2)Bowlers detail:\n 3)Match summary:\n 4)Record:\n 5)Exit\n ");
        scanf("%d",&choice);
 
      switch(choice)
