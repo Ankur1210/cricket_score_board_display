@@ -27,7 +27,3 @@ When the project file of cricket score sheet project is executed, it works by fo
         If 4)is entered,the match records will be displyed like maximum runs,maximum sixes,mximum fours,maximum wicket taken etc.
         
         If 5)is entered,it is used to exit.
-
-
-Thus ,by entering the choice ,the user can see the cricket score board.
-
